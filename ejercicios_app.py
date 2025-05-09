@@ -4,7 +4,7 @@ st.set_page_config(layout="wide")
 st.title("📅 Rutina Semanal Funcional – Estabilidad, Rotación y Prevención")
 
 dias = {
-    "Lunes": [
+    "🏠🏋️Lunes": [
         "Dead bug con banda elástica",
         "Bird dog lento",
         "Puente de glúteos con elevación de pierna",
@@ -23,7 +23,7 @@ dias = {
         "Natación",
         "Estiramientos en sauna"
     ],
-    "Martes": [
+    "🏠🏃Martes": [
         "Dead bug con banda elástica",
         "Bird dog lento",
         "Pallof Press con goma",
@@ -36,7 +36,7 @@ dias = {
         "Correr 5 km",
         "Estiramientos y foam roller"
     ],
-    "Miércoles": [
+    "🏠🏋️Miércoles": [
         "Dead bug con banda elástica",
         "Bird dog lento",
         "Puente de glúteos con elevación de pierna",
@@ -55,7 +55,7 @@ dias = {
         "Natación",
         "Estiramientos en sauna"
     ],
-    "Jueves": [
+    "🏠🏃Jueves": [
         "Dead bug con banda elástica",
         "Bird dog lento",
         "Puente de glúteos con elevación de pierna",
@@ -68,12 +68,12 @@ dias = {
         "Correr 5 km",
         "Estiramientos y foam roller"
     ],
-    "Viernes": [
+    "🏋️Viernes": [
         "Battlebox a las 14h (cardio, fuerza global y reacción)",
         "Natación",
         "Estiramientos en sauna"
     ],
-    "Sábado": [
+    "🚲 Sábado": [
         "Bici (rodaje tranquilo o regenerativo)",
         "Estiramientos y foam roller",
         "Estiramientos activos de isquios y psoas",
@@ -88,7 +88,7 @@ info_ejercicios = {
         - Mueve brazo y pierna opuestos al mismo tiempo, de forma lenta y controlada.
         - Si usas banda, añade tensión entre manos y pies para activar más el core.
         """,
-        "imagen": None
+        "imagen": ["img/Dead_bug_con_banda1.jpg","img/Dead_bug_con_banda2.jpg"]
     },
     "Bird dog lento": {
         "descripcion": """
@@ -97,7 +97,7 @@ info_ejercicios = {
         - Mantén pelvis estable, sin inclinaciones.
         - Realiza una pausa de 1-2 segundos en cada extensión.
         """,
-        "imagen": None
+        "imagen": "Bird_dog_lento.jpg"
     },
     "Puente de glúteos con elevación de pierna": {
         "descripcion": """
@@ -105,7 +105,7 @@ info_ejercicios = {
         - Eleva la pelvis con ambas piernas, luego estira una pierna sin que caiga la cadera.
         - Mantén el abdomen activado y controla el descenso.
         """,
-        "imagen": None
+        "imagen": "img/Puente_de_gluteo_con_elevacion_de_pierna.webp"
     },
     "Pallof Press con goma": {
         "descripcion": """
@@ -114,7 +114,7 @@ info_ejercicios = {
         - Extiende los brazos al frente sin que el tronco gire.
         - Mantén la tensión durante 1-2 segundos y vuelve.
         """,
-        "imagen": None
+        "imagen": ["img/Pallof_press_con_goma1.jpg","img/Pallof_press_con_goma2.jpg"]
     },
     "Side plank con rodilla apoyada": {
         "descripcion": """
@@ -123,7 +123,7 @@ info_ejercicios = {
         - Eleva la cadera y mantén la línea recta desde hombros a rodilla.
         - Progresión: eleva la pierna libre.
         """,
-        "imagen": None
+        "imagen": "img/side_plank_con_rodilla_apoyada.jpg"
     },
     "Clamshells lentos": {
         "descripcion": """
@@ -131,8 +131,9 @@ info_ejercicios = {
         - Túmbate de lado con las rodillas flexionadas.
         - Abre la rodilla superior sin separar los pies.
         - Movimiento lento, sin balancear la pelvis.
+        - Se puede hacer mejor estando en plancha lateral
         """,
-        "imagen": None
+        "imagen": ["img/Clamshell_con_banda1.jpg", "img/Clamshell_con_banda2.jpg"]
     },
     "Rotaciones con palo de escoba": {
         "descripcion": """
@@ -141,7 +142,7 @@ info_ejercicios = {
         - Controla la vuelta, evitando impulso.
         - Ideal para aprender a 'guardar la cadera' mientras el tronco gira.
         """,
-        "imagen": None
+        "imagen": "img/rotacion_de_troncoo_con_palo.jpg"
     },
     "Sentadilla isométrica con giro de tronco": {
         "descripcion": """
@@ -149,7 +150,8 @@ info_ejercicios = {
         - Apóyate en pared en posición de sentadilla (90º).
         - Gira los brazos lentamente de lado a lado sin perder altura.
         """,
-        "imagen": None
+        "imagen": None,
+        "video": "https://www.youtube.com/watch?v=cZSMJJI8_YY"
     }
 }
 
@@ -190,7 +192,8 @@ info_ejercicios.update({
         - Usa las piernas para empujar y rota desde el core.
         - El brazo debe seguir al tronco, no ir solo.
         """,
-        "imagen": None
+        "imagen": None,
+        "video": "https://www.youtube.com/watch?v=PNI1QKiWfiY"
     },
     "Slam lateral con balón medicinal al suelo": {
         "descripcion": """
@@ -199,7 +202,8 @@ info_ejercicios.update({
         - Evita girar los pies: rota desde el tronco.
         - Mantén hombros abajo y abdominales activos.
         """,
-        "imagen": None
+        "imagen": None,
+        "video": "https://www.youtube.com/watch?v=wrBeL_-Dxzw"
     }
 })
 
@@ -212,14 +216,15 @@ info_ejercicios.update({
         - Tira hacia el ombligo sin encoger los hombros.
         - Controla la vuelta, mantén el pecho proyectado.
         """,
-        "imagen": None
+        "imagen": "img/Remo_bajo_en_maquina_con_agarre_en_V.png"
     },
-    "Remo con cuerda en polea desde sentadilla parcial": {
+    "Remo desde sentadilla parcial": {
         "descripcion": """
         Integra fuerza postural con activación de dorsal ancho.
-        - Colócate en una sentadilla parcial (cadera hacia atrás, espalda recta).
-        - Tira de la cuerda hacia la cara o pecho, manteniendo el eje.
-        - Controla la postura lumbar en todo momento.
+        - Colócate en una sentadilla parcial y **mantén la posición durante todo el ejercicio** (cadera hacia atrás, espalda recta, piernas flexionadas).
+        - Tira de la cuerda hacia la cara o el pecho sin perder el eje corporal.
+        - Controla la postura lumbar en todo momento, evitando encorvar la espalda.
+        - Ideal para fortalecer desde una base estable y conectar tronco-brazo sin extensión de piernas.
         """,
         "imagen": None
     },
@@ -230,7 +235,8 @@ info_ejercicios.update({
         - Sube el torso activando glúteos y espalda baja, sin arquear en exceso.
         - Movimiento lento y con pausa arriba.
         """,
-        "imagen": None
+        "imagen": None,
+        "video": "https://www.youtube.com/watch?v=zyBowrSR6pI"
     },
     "Press Arnold": {
         "descripcion": """
@@ -239,7 +245,7 @@ info_ejercicios.update({
         - Gira al subir hasta acabar con palmas hacia fuera.
         - Evita arquear la espalda. Usa peso controlado.
         """,
-        "imagen": None
+        "imagen": "img/PRESS_ARNOLD.png"
     },
     "Face pulls en polea con cuerda": {
         "descripcion": """
@@ -248,7 +254,7 @@ info_ejercicios.update({
         - Tira separando manos y llevando la cuerda hacia la frente.
         - Aprieta omóplatos sin elevar los hombros.
         """,
-        "imagen": None
+        "imagen": "img/face_pulls.jpg"
     }
 })
 
@@ -351,6 +357,9 @@ for dia, ejercicios in dias.items():
             datos = info_ejercicios.get(ejercicio, {})
             descripcion = datos.get("descripcion", "🔸 [Ejercicio aún sin descripción]")
             imagen = datos.get("imagen")
+            video = datos.get("video")
             st.markdown(descripcion)
             if imagen:
                 st.image(imagen)
+            if video:
+                st.video(video)
