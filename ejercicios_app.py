@@ -356,10 +356,22 @@ for dia, ejercicios in dias.items():
         with st.expander(f"▶️ {ejercicio}"):
             datos = info_ejercicios.get(ejercicio, {})
             descripcion = datos.get("descripcion", "🔸 [Ejercicio aún sin descripción]")
-            imagen = datos.get("imagen")
+            imagen_path = datos.get("imagen")
             video = datos.get("video")
+            
             st.markdown(descripcion)
-            if imagen:
-                st.image(imagen)
+            
+            if imagen_path:
+                try:
+                    if isinstance(imagen_path, list):
+                        for img in imagen_path:
+                            st.image(img)
+                    else:
+                        st.image(imagen_path)
+                except Exception as e:
+                    st.error(f"No se pudo cargar la imagen: {e}")
+                    
             if video:
                 st.video(video)
+
+
