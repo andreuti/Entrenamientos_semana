@@ -88,7 +88,7 @@ info_ejercicios = {
         - Mueve brazo y pierna opuestos al mismo tiempo, de forma lenta y controlada.
         - Si usas banda, añade tensión entre manos y pies para activar más el core.
         """,
-        "imagen": ["img/Dead_bug_con_banda1.jpg","img/Dead_bug_con_banda2.jpg"]
+        "imagen": ["img/Dead_bug_con_banda1.jpg", "img/Dead_bug_con_banda2.jpg"]
     },
     "Bird dog lento": {
         "descripcion": """
@@ -97,7 +97,7 @@ info_ejercicios = {
         - Mantén pelvis estable, sin inclinaciones.
         - Realiza una pausa de 1-2 segundos en cada extensión.
         """,
-        "imagen": "Bird_dog_lento.jpg"
+        "imagen": "img/Bird_dog_lento.jpg"
     },
     "Puente de glúteos con elevación de pierna": {
         "descripcion": """
@@ -114,7 +114,7 @@ info_ejercicios = {
         - Extiende los brazos al frente sin que el tronco gire.
         - Mantén la tensión durante 1-2 segundos y vuelve.
         """,
-        "imagen": ["img/Pallof_press_con_goma1.jpg","img/Pallof_press_con_goma2.jpg"]
+        "imagen": ["img/Pallof_press_con_goma1.jpg", "img/Pallof_press_con_goma2.jpg"]
     },
     "Side plank con rodilla apoyada": {
         "descripcion": """
@@ -142,7 +142,7 @@ info_ejercicios = {
         - Controla la vuelta, evitando impulso.
         - Ideal para aprender a 'guardar la cadera' mientras el tronco gira.
         """,
-        "imagen": "img/rotacion_de_troncoo_con_palo.jpg"
+        "imagen": "img/rotacion_de_tronco_con_palo.jpg"
     },
     "Sentadilla isométrica con giro de tronco": {
         "descripcion": """
@@ -216,7 +216,7 @@ info_ejercicios.update({
         - Tira hacia el ombligo sin encoger los hombros.
         - Controla la vuelta, mantén el pecho proyectado.
         """,
-        "imagen": "img/Remo_bajo_en_maquina_con_agarre_en_V.png"
+        "imagen": "img/Remo_bajo_en_maquina_con_agarre_en_V.jpg"
     },
     "Remo desde sentadilla parcial": {
         "descripcion": """
@@ -226,7 +226,7 @@ info_ejercicios.update({
         - Controla la postura lumbar en todo momento, evitando encorvar la espalda.
         - Ideal para fortalecer desde una base estable y conectar tronco-brazo sin extensión de piernas.
         """,
-        "imagen": None
+        "imagen": "img/remo_desde_sentadilla.jpg"
     },
     "Elevación de torso en fitball": {
         "descripcion": """
