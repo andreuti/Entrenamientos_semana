@@ -1,8 +1,15 @@
 import streamlit as st
 import os
+
+# ✅ DEBE SER la primera línea Streamlit
+st.set_page_config(layout="wide")
+
+# 🧭 Mostrar el path actual (solo para depuración, puedes borrarlo después)
 st.write("📂 Directorio actual:", os.getcwd())
 
-st.set_page_config(layout="wide")
+# 🧱 Ruta absoluta base para cargar imágenes
+base_path = os.path.dirname(__file__)
+
 st.title("📅 Rutina Semanal Funcional – Estabilidad, Rotación y Prevención")
 
 dias = {
@@ -367,9 +374,9 @@ for dia, ejercicios in dias.items():
                 try:
                     if isinstance(imagen_path, list):
                         for img in imagen_path:
-                            st.image(img)
+                            st.image(os.path.join(base_path, img))
                     else:
-                        st.image(imagen_path)
+                        st.image(os.path.join(base_path, imagen_path))
                 except Exception as e:
                     st.error(f"No se pudo cargar la imagen: {e}")
                     
