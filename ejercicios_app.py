@@ -105,7 +105,7 @@ info_ejercicios = {
         - Eleva la pelvis con ambas piernas, luego estira una pierna sin que caiga la cadera.
         - Mantén el abdomen activado y controla el descenso.
         """,
-        "imagen": "img/Puente_de_gluteo_con_elevacion_de_pierna.webp"
+        "imagen": "img/Puente_de_gluteo_con_elevacion_de_pierna.jpg"
     },
     "Pallof Press con goma": {
         "descripcion": """
@@ -245,7 +245,7 @@ info_ejercicios.update({
         - Gira al subir hasta acabar con palmas hacia fuera.
         - Evita arquear la espalda. Usa peso controlado.
         """,
-        "imagen": "img/PRESS_ARNOLD.png"
+        "imagen": "img/PRESS_ARNOLD.jpg"
     },
     "Face pulls en polea con cuerda": {
         "descripcion": """
