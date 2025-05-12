@@ -1,16 +1,17 @@
 import streamlit as st
 import os
+import pathlib
 
 # ✅ DEBE SER la primera línea Streamlit
 st.set_page_config(layout="wide")
 
-# 🧭 Mostrar el path actual (solo para depuración, puedes borrarlo después)
-st.write("📂 Directorio actual:", os.getcwd())
+# Ruta absoluta para cargar imágenes
+base_path = os.path.dirname(os.path.abspath(__file__))
+img_path = os.path.join(base_path, "img")
 
-# 🧱 Ruta absoluta base para cargar imágenes
-base_path = os.path.dirname(__file__)
-
+# Título principal de la app
 st.title("📅 Rutina Semanal Funcional – Estabilidad, Rotación y Prevención")
+
 
 dias = {
     "🏠🏋️Lunes": [
@@ -97,7 +98,7 @@ info_ejercicios = {
         - Mueve brazo y pierna opuestos al mismo tiempo, de forma lenta y controlada.
         - Si usas banda, añade tensión entre manos y pies para activar más el core.
         """,
-        "imagen": ["img/Dead_bug_con_banda1.jpg", "img/Dead_bug_con_banda2.jpg"]
+        "imagen": ["Dead_bug_con_banda1.jpg", "Dead_bug_con_banda2.jpg"]
     },
     "Bird dog lento": {
         "descripcion": """
@@ -106,7 +107,7 @@ info_ejercicios = {
         - Mantén pelvis estable, sin inclinaciones.
         - Realiza una pausa de 1-2 segundos en cada extensión.
         """,
-        "imagen": "img/Bird_dog_lento.jpg"
+        "imagen": "Bird_dog_lento.jpg"
     },
     "Puente de glúteos con elevación de pierna": {
         "descripcion": """
@@ -114,7 +115,7 @@ info_ejercicios = {
         - Eleva la pelvis con ambas piernas, luego estira una pierna sin que caiga la cadera.
         - Mantén el abdomen activado y controla el descenso.
         """,
-        "imagen": "img/Puente_de_gluteo_con_elevacion_de_pierna.jpg"
+        "imagen": "Puente_de_gluteo_con_elevacion_de_pierna.jpg"
     },
     "Pallof Press con goma": {
         "descripcion": """
@@ -123,7 +124,7 @@ info_ejercicios = {
         - Extiende los brazos al frente sin que el tronco gire.
         - Mantén la tensión durante 1-2 segundos y vuelve.
         """,
-        "imagen": ["img/Pallof_press_con_goma1.jpg", "img/Pallof_press_con_goma2.jpg"]
+        "imagen": ["Pallof_press_con_goma1.jpg", "Pallof_press_con_goma2.jpg"]
     },
     "Side plank con rodilla apoyada": {
         "descripcion": """
@@ -132,7 +133,7 @@ info_ejercicios = {
         - Eleva la cadera y mantén la línea recta desde hombros a rodilla.
         - Progresión: eleva la pierna libre.
         """,
-        "imagen": "img/side_plank_con_rodilla_apoyada.jpg"
+        "imagen": "side_plank_con_rodilla_apoyada.jpg"
     },
     "Clamshells lentos": {
         "descripcion": """
@@ -142,7 +143,7 @@ info_ejercicios = {
         - Movimiento lento, sin balancear la pelvis.
         - Se puede hacer mejor estando en plancha lateral
         """,
-        "imagen": ["img/Clamshell_con_banda1.jpg", "img/Clamshell_con_banda2.jpg"]
+        "imagen": ["Clamshell_con_banda1.jpg", "Clamshell_con_banda2.jpg"]
     },
     "Rotaciones con palo de escoba": {
         "descripcion": """
@@ -151,7 +152,7 @@ info_ejercicios = {
         - Controla la vuelta, evitando impulso.
         - Ideal para aprender a 'guardar la cadera' mientras el tronco gira.
         """,
-        "imagen": "img/rotacion_de_tronco_con_palo.jpg"
+        "imagen": "rotacion_de_troncoo_con_palo.jpg"
     },
     "Sentadilla isométrica con giro de tronco": {
         "descripcion": """
@@ -225,7 +226,7 @@ info_ejercicios.update({
         - Tira hacia el ombligo sin encoger los hombros.
         - Controla la vuelta, mantén el pecho proyectado.
         """,
-        "imagen": "img/Remo_bajo_en_maquina_con_agarre_en_V.jpg"
+        "imagen": "Remo_bajo_en_maquina_con_agarre_en_V.jpg"
     },
     "Remo desde sentadilla parcial": {
         "descripcion": """
@@ -235,7 +236,7 @@ info_ejercicios.update({
         - Controla la postura lumbar en todo momento, evitando encorvar la espalda.
         - Ideal para fortalecer desde una base estable y conectar tronco-brazo sin extensión de piernas.
         """,
-        "imagen": "img/remo_desde_sentadilla.jpg"
+        "imagen": "remo_desde_sentadilla.jpg"
     },
     "Elevación de torso en fitball": {
         "descripcion": """
@@ -254,7 +255,7 @@ info_ejercicios.update({
         - Gira al subir hasta acabar con palmas hacia fuera.
         - Evita arquear la espalda. Usa peso controlado.
         """,
-        "imagen": "img/PRESS_ARNOLD.jpg"
+        "imagen": "PRESS_ARNOLD.jpg"
     },
     "Face pulls en polea con cuerda": {
         "descripcion": """
@@ -263,7 +264,7 @@ info_ejercicios.update({
         - Tira separando manos y llevando la cuerda hacia la frente.
         - Aprieta omóplatos sin elevar los hombros.
         """,
-        "imagen": "img/face_pulls.jpg"
+        "imagen": "face_pulls.jpg"
     }
 })
 
@@ -359,6 +360,7 @@ info_ejercicios.update({
 
 
 
+
 for dia, ejercicios in dias.items():
     st.header(f"📆 {dia}")
     for ejercicio in ejercicios:
@@ -367,20 +369,27 @@ for dia, ejercicios in dias.items():
             descripcion = datos.get("descripcion", "🔸 [Ejercicio aún sin descripción]")
             imagen_path = datos.get("imagen")
             video = datos.get("video")
-            
+
             st.markdown(descripcion)
-            
+
+            # Mostrar imágenes si existen
             if imagen_path:
                 try:
                     if isinstance(imagen_path, list):
                         for img in imagen_path:
-                            st.image(os.path.join(base_path, img))
+                            ruta_img = os.path.join(img_path, img)
+                            ruta_img = pathlib.Path(ruta_img).as_posix()  # <- evita problemas con \
+                            st.image(ruta_img)
                     else:
-                        st.image(os.path.join(base_path, imagen_path))
+                        ruta_img = os.path.join(img_path, imagen_path)
+                        ruta_img = pathlib.Path(ruta_img).as_posix()
+                        st.image(ruta_img)
                 except Exception as e:
                     st.error(f"No se pudo cargar la imagen: {e}")
-                    
+
+            # Mostrar vídeo si existe
             if video:
                 st.video(video)
+
 
 
