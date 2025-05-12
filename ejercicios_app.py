@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+st.write("📂 Directorio actual:", os.getcwd())
 
 st.set_page_config(layout="wide")
 st.title("📅 Rutina Semanal Funcional – Estabilidad, Rotación y Prevención")
